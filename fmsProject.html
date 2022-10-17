@@ -8,20 +8,62 @@
     top:0%;
     width: 7%;
     height: 8%;
+    z-index: 0;
+    border: 2%;
+    border-color: black;
 }
 
 #nav{
     position: fixed;
+    top: 0%;
     left:0%;
-    width:15%;
-    background-color: aqua;
+    width:11%;
+    height: 100%;
+    background-color: grey;
+    color: black;
+    z-index: 10;
+}
+#body{
+    position: fixed;
+    width:100%;
+    height: 100%;
+    z-index: 5;
+}
+#title{
+    float: auto;
+    z-index: 2;
+    text-align: center;
+    font-size: 12pt;
+    background-color: black;
+    z-index: 5;
 }
 </style>
 
-<div id = "nav";><button id = "menuB";>Menu</button>words</div>
-<head>
+<div id = "nav">
+    <button type = "button" id = "menuB" onclick="navMenu()">
+        Menu
+    </button>
+</div>
+
+
+
+<head id = "title">
     Testing 1234
 </head>
 
+<script>
 
+document.addEventListener('keyup', function (event) {
+        if (event.keyCode == 27) 
+            navMenu();
+    }, true);
+
+function navMenu(){
+    if(document.getElementById("nav").style.zIndex == 3)
+        document.getElementById("nav").style.zIndex = 10;
+    else 
+        document.getElementById("nav").style.zIndex = 3;
+}
+
+</script>
 </html>
