@@ -8,7 +8,7 @@
     top:0%;
     width: 7%;
     height: 8%;
-    z-index: 0;
+    z-index: 10;
     border: 2%;
     border-color: black;
 }
@@ -21,8 +21,8 @@
     height: 100%;
     background-color: grey;
     color: black;
-    opacity: 0%;
-    z-index: 4;
+    opacity: 100%;
+    z-index: 3;
 }
 #navP{
     position: absolute;
@@ -55,17 +55,22 @@
 
 <!-- Nav panel w links-->
 <div id = "nav">
-    <p id = "navP">Hello</p>
-    
+    <p id = "navP">
+    Tracing
+    <br><br><br><br><br><br>
+    Coloring
+    <br><br><br><br><br><br>
+    Stacking
+    </p>
 </div>
 
+<!-- Menu Button -->
+<button type = "button" id = "menuB" onclick="navMenu()"> Menu </button>
 
 
 <head id = "body" >
-    <!-- Menu Button -->
-    <button type = "button"; id = "menuB"; onclick="navMenu()";> Menu </button>
+    <head1 id = "games">Pick a Game</head1>
 
-    <head1 id = "games">Tracing</head1>
 </head>
 
 <script>
@@ -76,10 +81,12 @@ document.addEventListener('keyup', function (event) {
     }, true);
 
 function navMenu(){
-    if(document.getElementById("nav").style.opacity == 100)
-        document.getElementById("nav").style.opacity = 0;
-    else 
+    if(document.getElementById("nav").style.opacity == 0){
         document.getElementById("nav").style.opacity = 100;
+    }
+    else {
+        document.getElementById("nav").style.opacity = 0;
+    }
 }
 
 </script>
