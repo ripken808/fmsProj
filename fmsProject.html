@@ -41,6 +41,7 @@
     color: black;
     background-color: white;
     z-index: 5;
+    background-image: url("BKGRD.jpg");
 }
 #games{
     position : absolute;
@@ -51,26 +52,35 @@
     font-size: 18pt;
     color: black;
 }
+#backg{
+    position: absolute;
+    z-index: 0;
+    left:0%;
+    top: 0%;
+    
+}
 </style>
 
 <!-- Nav panel w links-->
 <div id = "nav">
     <p id = "navP">
-    Tracing
+    <button href = "tracing.html">Tracing</button>
     <br><br><br><br><br><br>
-    Coloring
+    <button href = "coloring.html">Coloring</button>
     <br><br><br><br><br><br>
-    Stacking
+    <button href = "coloring.html">Stacking</button>
     </p>
 </div>
 
 <!-- Menu Button -->
 <button type = "button" id = "menuB" onclick="navMenu()"> Menu </button>
-
+<p id = "backg"><img href = "BKGRD.jpg"></p>
 
 <head id = "body" >
     <head1 id = "games">Pick a Game</head1>
+    <p id = "games" > <span href = "tracing.html">TRACING</span><br><br><br><br><br><br>
 
+    </p>
 </head>
 
 <script>
