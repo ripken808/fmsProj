@@ -1,0 +1,103 @@
+<html>
+<script src = "p5.js"> </script>
+<style>
+
+#menuB{
+    position: fixed;
+    left: 0%;
+    top:0%;
+    width: 7%;
+    height: 8%;
+    z-index: 10;
+    border: 2%;
+    border-color: black;
+}
+
+#nav{
+    position: fixed;
+    top: 0%;
+    left:0%;
+    width:11%;
+    height: 100%;
+    background-color: grey;
+    color: black;
+    opacity: 0%;
+    z-index: 3;
+}
+#navP{
+    position: absolute;
+    top: 12%;
+    left:0%;
+    width:11%;
+    height: 100%;
+    font-size: 15pt;
+    color: white;
+}
+#body{
+    position: relative;
+    float: left;
+    width:100%;
+    height: 100%;
+    color: black;
+    z-index: 5;
+    background-image: url('BKGRD.jpg');
+    background-size: cover;
+}
+#games{
+    position : absolute;
+    width: 100%;
+    top: 10%;
+    z-index: 2;
+    text-align: center;
+    font-size: 18pt;
+    color: black;
+}
+#backg{
+    position: absolute;
+    z-index: 0;
+    left:0%;
+    top: 0%;
+    
+}
+</style>
+
+<!-- Nav panel w links-->
+<div id = "nav">
+    <p id = "navP">
+    <button href = "tracing.html">Tracing</button>
+    <br><br><br><br><br><br>
+    <button href = "coloring.html">Coloring</button>
+    <br><br><br><br><br><br>
+    <button href = "coloring.html">Stacking</button>
+    </p>
+</div>
+
+<!-- Menu Button -->
+<button type = "button" id = "menuB" onclick="navMenu()"> Menu </button>
+<p id = "backg"><img href = "BKGRD.jpg"></p>
+
+<head id = "body" >
+    <head1 id = "games">Pick a Game</head1>
+    <p id = "games" > <span href = "tracing.html">TRACING</span><br><br><br><br><br><br>
+
+    </p>
+</head>
+
+<script>
+
+document.addEventListener('keyup', function (event) {
+        if (event.keyCode == 27) 
+            navMenu();
+    }, true);
+
+function navMenu(){
+    if(document.getElementById("nav").style.opacity == 0){
+        document.getElementById("nav").style.opacity = 100;
+    }
+    else {
+        document.getElementById("nav").style.opacity = 0;
+    }
+}
+
+</script>
+</html>
