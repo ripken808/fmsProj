@@ -64,7 +64,7 @@
 <!-- Nav panel w links-->
 <div id = "nav">
     <p id = "navP">
-    <button href = "tracing.html">Tracing</button>
+    <button onclick="tracing()">Tracing</button>
     <br><br><br><br><br><br>
     <button href = "coloring.html">Coloring</button>
     <br><br><br><br><br><br>
@@ -78,7 +78,9 @@
 
 <head id = "body" >
     <head1 id = "games">Pick a Game</head1>
-    <p id = "games" > <span href = "tracing.html">TRACING</span><br><br><br><br><br><br>
+    <p id = "games" ><br><br><br><br><button>Tracing</button><br><br><br>
+        <br><br><br>Coloring<br><br><br>
+        <br><br><br>Stacking<br><br><br><br>
 
     </p>
 </head>
@@ -97,6 +99,10 @@ function navMenu(){
     else {
         document.getElementById("nav").style.opacity = 0;
     }
+}
+
+function tracing(){
+    window.location.assign("tracing.html");
 }
 
 </script>
