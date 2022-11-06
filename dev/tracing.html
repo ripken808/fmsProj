@@ -55,12 +55,12 @@
 
 <!-- Nav panel w links-->
 <div id = "nav">
-    <p id = "navP" >
-    <button href = "fmsProject.html">NOT WORKING</button>
+    <p id = "navP">
+    <button onclick="home()">Home</button>
     <br><br><br><br><br><br>
-    Coloring
+    <button onclick="coloring()">Coloring</button>
     <br><br><br><br><br><br>
-    Stacking
+    <button onclick="stacking()">Stacking</button>
     </p>
 </div>
 
@@ -78,7 +78,8 @@
 document.addEventListener('keyup', function (event) {
         if (event.keyCode == 27) 
             navMenu();
-    }, true);
+    }, 
+true);
 
 function navMenu(){
     if(document.getElementById("nav").style.opacity == 0){
@@ -88,6 +89,17 @@ function navMenu(){
         document.getElementById("nav").style.opacity = 0;
     }
 }
-
+function tracing(){
+    window.location.assign("tracing.html");
+}
+function coloring(){
+    window.location.assign("coloring.html");
+}
+function stacking(){
+    window.location.assign("stacking.html");
+}
+function home(){
+    window.location.assign("fmsProject.html");
+}
 </script>
 </html>
