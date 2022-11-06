@@ -55,13 +55,15 @@
 
 <!-- Nav panel w links-->
 <div id = "nav">
-    <p id = "navP" >
-    <button href = "fmsProject.html">NOT WORKING</button>
-    <br><br><br><br><br><br>
-    Coloring
-    <br><br><br><br><br><br>
-    Stacking
-    </p>
+    <div id = "nav">
+        <p id = "navP">
+        <button onclick="home()">Home</button>
+        <br><br><br><br><br><br>
+        <button onclick="tracing()">Tracing</button>
+        <br><br><br><br><br><br>
+        <button onclick="stacking()">Stacking</button>
+        </p>
+    </div>
 </div>
 
 <!-- Menu Button -->
@@ -69,7 +71,7 @@
 
 
 <head id = "body" >
-    <head1 id = "games">TRACING!!!!!</head1>
+    <head1 id = "games">COLORING!!!!!</head1>
 
 </head>
 
@@ -87,6 +89,18 @@ function navMenu(){
     else {
         document.getElementById("nav").style.opacity = 0;
     }
+}
+function tracing(){
+    window.location.assign("tracing.html");
+}
+function coloring(){
+    window.location.assign("coloring.html");
+}
+function stacking(){
+    window.location.assign("stacking.html");
+}
+function home(){
+    window.location.assign("fmsProject.html");
 }
 
 </script>

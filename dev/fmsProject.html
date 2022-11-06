@@ -59,6 +59,11 @@
     top: 0%;
     
 }
+#gameB{
+    position:relative;
+    width: 35%;
+    height: 15%;
+}
 </style>
 
 <!-- Nav panel w links-->
@@ -66,9 +71,9 @@
     <p id = "navP">
     <button onclick="tracing()">Tracing</button>
     <br><br><br><br><br><br>
-    <button href = "coloring.html">Coloring</button>
+    <button onclick="coloring()">Coloring</button>
     <br><br><br><br><br><br>
-    <button href = "coloring.html">Stacking</button>
+    <button onclick="stacking()">Stacking</button>
     </p>
 </div>
 
@@ -78,8 +83,8 @@
 
 <head id = "body" >
     <head1 id = "games">Pick a Game</head1>
-    <p id = "games" ><br><br><br><br><button>Tracing</button><br><br><br>
-        <br><br><br>Coloring<br><br><br>
+    <p id = "games" ><br><br><br><br><button id = "gameB" onclick="tracing()">Tracing</button><br><br><br>
+        <br><br><br><button id = "gameB" onclick="coloring()">Coloring</button><br><br><br>
         <br><br><br>Stacking<br><br><br><br>
 
     </p>
@@ -109,6 +114,9 @@ function coloring(){
 }
 function stacking(){
     window.location.assign("stacking.html");
+}
+function home(){
+    window.location.assign("fmsProject.html");
 }
 
 </script>
