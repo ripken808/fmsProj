@@ -21,7 +21,7 @@
     height: 100%;
     background-color: grey;
     color: black;
-    opacity: 100%;
+    opacity: 0%;
     z-index: 3;
 }
 #navP{
@@ -80,9 +80,9 @@
 
 <!-- Menu Button -->
 <button type = "button" id = "menuB" onclick="navMenu()"> Menu </button>
-<p id = "backg"><img href = "BKGRD.jpg"></p>
 
-<head id = "body" onload="load()">
+
+<head id = "body">
     <head1 id = "games">Pick a Game</head1>
     <p id = "games" ><br><br><br><br><button id = "gameB" onclick="tracing()">Tracing</button><br><br><br>
         <br><br><br><button id = "gameB" onclick="coloring()">Coloring</button><br><br><br>
@@ -92,7 +92,7 @@
 </head>
 
 <script>
-
+document.body.style.backgroundImage = "BKGRD.jpg";
 document.addEventListener('keyup', function (event) {
         if (event.keyCode == 27) 
             navMenu();
@@ -120,9 +120,8 @@ function stacking(){
 function home(){
     window.location.assign("fmsProject.html");
 }
-function load(){
-    document.body.
-}
+
+
 
 </script>
 </html>
