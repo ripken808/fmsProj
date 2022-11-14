@@ -51,6 +51,15 @@
     font-size: 18pt;
     color: black;
 }
+#playB{
+    position: relative;
+    left: 20%;
+    top: 35%;
+    width: 60%;
+    height: 20%;
+    font-size: 20px;
+    text-align: center;
+}
 </style>
 
 <!-- Nav panel w links-->
@@ -70,6 +79,7 @@
 
 <head id = "body" >
     <head1 id = "games">STACKING</head1>
+    <button id = "playB" onclick = "playGame()">Play Game</button>
 
 </head>
 
@@ -101,6 +111,10 @@ function stacking(){
 function home(){
     window.location.assign("fmsProject.html");
 }
+function playGame(){
+    window.location.assign("game.html");
+}
+
 
 </script>
 </html>
