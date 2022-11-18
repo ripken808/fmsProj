@@ -84,6 +84,19 @@
 
 <script>
 
+function setup() {
+  createCanvas(400, 400);
+}
+function draw() {
+  if (mouseIsPressed) {
+    fill(182, 82, 40);
+  }
+  else{
+    fill(255);
+  }
+  ellipse(mouseX,mouseY,80,80);
+}
+    
 document.addEventListener('keyup', function (event) {
         if (event.keyCode == 27) 
             navMenu();
