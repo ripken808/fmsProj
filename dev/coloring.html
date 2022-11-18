@@ -87,14 +87,21 @@
 function setup() {
   createCanvas(400, 400);
 }
+
 function draw() {
-  if (mouseIsPressed) {
-    fill(182, 82, 40);
+noStroke();
+  fill(255);
+circle(200,300,150);
+
+  if(mouseIsPressed) {
+    fill(123,63,0);
   }
   else{
-    fill(255);
+
+    noStroke();
+    fill(123,63,0);
   }
-  ellipse(mouseX,mouseY,20,20);
+  ellipse(mouseX,mouseY,80,80);
 }
     
 document.addEventListener('keyup', function (event) {
