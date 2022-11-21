@@ -1,8 +1,86 @@
 <html>
+  <style>
+    #menuB{
+    position: fixed;
+    left: 0%;
+    top:0%;
+    width: 7%;
+    height: 8%;
+    z-index: 10;
+    border: 2%;
+    border-color: black;
+}
+
+#nav{
+    position: fixed;
+    top: 0%;
+    left:0%;
+    width:11%;
+    height: 100%;
+    background-color: grey;
+    color: black;
+    opacity: 0%;
+    z-index: 3;
+}
+#navP{
+    position: absolute;
+    top: 12%;
+    left:0%;
+    width:11%;
+    height: 100%;
+    font-size: 15pt;
+    color: white;
+}
+  </style>
   <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
     <script src="p5.js"></script>
   </head>
+  <div id = "nav">
+    <p id = "navP">
+    <button onclick="home()">Home</button>
+    <br><br><br><br><br><br>
+    <button onclick="coloring()">Coloring</button>
+    <br><br><br><br><br><br>
+    <button onclick="stacking()">Stacking</button>
+    </p>
+</div>
+
+<!-- Menu Button -->
+<button type = "button" id = "menuB" onclick="navMenu()"> Menu </button>
   <body>
   </body>
+  <script>
+
+    document.addEventListener('keyup', function (event) {
+            if (event.keyCode == 27) 
+                navMenu();
+        }, 
+    true);
+    
+    function navMenu(){
+        if(document.getElementById("nav").style.opacity == 0){
+            document.getElementById("nav").style.opacity = 100;
+        }
+        else {
+            document.getElementById("nav").style.opacity = 0;
+        }
+    }
+    function tracing(){
+        window.location.assign("tracing.html");
+    }
+    function playGame(){
+        window.location.assign("game1.html");
+    }
+    
+    function coloring(){
+        window.location.assign("coloring.html");
+    }
+    function stacking(){
+        window.location.assign("stacking.html");
+    }
+    function home(){
+        window.location.assign("fmsProject.html");
+    }
+    </script>
 </html>
