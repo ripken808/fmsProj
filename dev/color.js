@@ -1,9 +1,9 @@
 function setup() {
   createCanvas(400, 400);
 }
-
 function draw() {
-noStroke();
+
+  noStroke();
   fill(255);
 circle(200,300,150);
 
@@ -11,7 +11,6 @@ circle(200,300,150);
     fill(123,63,0);
   }
   else{
-
     noStroke();
     fill(123,63,0);
   }
