@@ -3,20 +3,27 @@ function setup() {
 }
   
 function draw() {
-    //background(220);
+    background(220);
+    let mil = millis()/1000;
+    let timer = 30;
+    fill(0);
+    textSize(24);
+    text(`Timer: ${round(timer- mil)}`, 1450, 30);
 
     //coin on screen
-    //ellipseMode(CENTER);
-    //fill(255,223,0);
-    //ellipse(1200,460,100,40);
-    // ellipseMode(CENTER);
-    // ellipse(1200,450,100,40);
-    // line(1149,450,1149,460);
-    // line(1250,450,1250,460);
+    ellipseMode(CENTER);
+    fill(255,223,0);
+    ellipse(1200,460,100,40);
+    ellipseMode(CENTER);
+    ellipse(1200,450,100,40);
+    line(1149,450,1149,460);
+    line(1250,450,1250,460);
 
     //Table
-    fill(255,248,220);
-    rect(800, 550, 100, 20);
+    fill(78,53,36);
+    rect(550, 575, 400, 20);
+    rect(570, 595, 17, 175);
+    rect(913, 595, 17, 175);
 
     //coin();
 }
