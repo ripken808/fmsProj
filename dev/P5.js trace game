@@ -5,25 +5,27 @@ function setup() {
 function draw() {
   background(220);
   
-  x = mouseX;
-  y = mouseY;
+  let x = mouseX;
+  let y = mouseY;
+  let mil = millis();
+  timelimit = 25;
   
-  c1 = createDiv("Real");
-  c2 = createDiv("Real");
-  c3 = createDiv("Real");
-  c4 = createDiv("Real");
-  c5 = createDiv("Real");
+  c1 = createDiv("");
+  c2 = createDiv("");
+  c3 = createDiv("");
+  c4 = createDiv("");
+  c5 = createDiv("");
   
-  i1 = createDiv(".");
-  i2 = createDiv(".");
-  i3 = createDiv(".");
-  i4 = createDiv(".");
-  i5 = createDiv(".");
-  i6 = createDiv(".");
-  i7 = createDiv(".");
-  i8 = createDiv(".");
-  i9 = createDiv(".");
-  i10 = createDiv(".");
+  i1 = createDiv("");
+  i2 = createDiv("");
+  i3 = createDiv("");
+  i4 = createDiv("");
+  i5 = createDiv("");
+  i6 = createDiv("");
+  i7 = createDiv("");
+  i8 = createDiv("");
+  i9 = createDiv("");
+  i10 = createDiv("");
   
   fill(20,140,140);
   rect(80,70,280,10);
@@ -111,6 +113,15 @@ function draw() {
   
   fill(255,20,30);
   ellipse(x,y,25,25);
+  
+  //timer
+     mil = int(mil/1000);
+  
+     fill(255);
+     stroke(0);
+     textSize(24);
+     text('Timer:',130,30)
+     text(timelimit - mil, 200,30)
   
   d = int(dist(x, y, 330, 300));
   if(d<30){
