@@ -3,12 +3,12 @@ function setup() {
 }
   
 function draw() {
-    background(220);
+    //background(220);
 
     //coin on screen
     //ellipseMode(CENTER);
-    fill(255,223,0);
-    ellipse(1200,460,100,40);
+    //fill(255,223,0);
+    //ellipse(1200,460,100,40);
     // ellipseMode(CENTER);
     // ellipse(1200,450,100,40);
     // line(1149,450,1149,460);
