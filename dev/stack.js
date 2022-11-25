@@ -25,16 +25,19 @@ function draw() {
     rect(570, 595, 17, 175);
     rect(913, 595, 17, 175);
     
-    if (timer > 0){
+    while (mil > 0){
         fill(0);
         textSize(24);
         text(`Timer: ${round(timer - mil)}`, 1450, 30);
+        timer -= mil;
     }
-    else {
+    if (timer <=0) {
         fill(0);
-        textSize(24);
+        textSize(24);v
         text(`Timer: 0`, 1450, 30);
-        rect(300, 100, 1300, 800);
+        fill(220);
+        rect(200, 100, 1200, 700);
+        text("Restart?", 750, 450);
     }
 
     //coin(points);
