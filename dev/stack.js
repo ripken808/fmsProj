@@ -30,7 +30,7 @@ function coin(){
 
         //if (dime == true){
             fill(255,223,0);
-            ellipse(mouseX,mouseY,100,40);
+            ellipse(-mouseX,-mouseY,100,40);
         //}
 
     }
