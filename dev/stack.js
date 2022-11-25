@@ -5,11 +5,10 @@ function setup() {
 function draw() {
     background(220);
     let mil = millis()/1000;
-    let timer = 30;
+    let timer = 10;
     let points = 0;
-    fill(0);
-    textSize(24);
-    text(`Timer: ${round(timer - mil)}`, 1450, 30);
+    
+    
 
     //coin on screen
     ellipseMode(CENTER);
@@ -27,9 +26,13 @@ function draw() {
     rect(913, 595, 17, 175);
     
     if (timer > 0){
+        fill(0);
+        textSize(24);
         text(`Timer: ${round(timer - mil)}`, 1450, 30);
     }
     else {
+        fill(0);
+        textSize(24);
         text(`Timer: 0`, 1450, 30);
         rect(300, 100, 1300, 800);
     }
