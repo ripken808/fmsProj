@@ -5,8 +5,8 @@ function setup() {
 function draw() {
   background(220);
   
-  let x = mouseX;
-  let y = mouseY;
+  let circX = mouseX;
+  let circY = mouseY;
   let mil = millis();
   timelimit = 25;
   
@@ -27,11 +27,20 @@ function draw() {
   i9 = createDiv("");
   i10 = createDiv("");
   
+  //walls of the game
+  
   fill(20,140,140);
   rect(80,70,280,10);
   i1.position(80,60);
   i1.size(280,10);
-  
+ if(circY >= 70 && circY <= 80){
+    fill(255);
+    stroke(0);
+    textSize(24);
+    text('Haha loser!!',80,60) 
+    }
+ 
+ 
   fill(20,140,140);
   rect(80,130,230,10);
   i2.position(80,120);
@@ -112,20 +121,50 @@ function draw() {
   rect(330,290,30,50);
   
   fill(255,20,30);
-  ellipse(x,y,25,25);
+  ellipse(circX,circY,25,25);
   
   //timer
-     mil = int(mil/1000);
+    totaltime = int(mil/1000);
+  
+    gametime = timelimit-totaltime;
   
      fill(255);
      stroke(0);
      textSize(24);
-     text('Timer:',130,30)
-     text(timelimit - mil, 200,30)
+     text('Timer:',130,30);
+     text(gametime, 200,30);
+   
+///conclusionofgame
   
-  d = int(dist(x, y, 330, 300));
+  d = int(dist(circX, circY, 330, 300));
+  
+///win screen 
   if(d<30){
-    text('Congrats',50,50);
+     fill(255);
+     stroke(0);
+     textSize(20);
+     text('Congratulations, much proud !!',80,60);
+    
+  
+  //lose screen
+    function lose(){
+     fill(255);
+     stroke(0);
+     textSize(44);
+     text('Haha loser!!',130,30) 
+    }
+    
+    if(gametime <= 0){
+     fill(255);
+     stroke(0);
+     textSize(44);
+     text('Haha loser!!',130,30)
+    }
+    
+  
+  //try again
+   
+  
   }
   
 }
