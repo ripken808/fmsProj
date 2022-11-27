@@ -1,8 +1,8 @@
 function setup() {
   createCanvas(400, 400);
+   background (255);
 }
 function draw() {
-
   noStroke();
   fill(255);
 circle(200,300,150);
