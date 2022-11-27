@@ -48,9 +48,10 @@ function draw() {
         button.position(700, 400);
         button.size(200, 100);
         button.mousePressed(res);
+
     }
 
-    //coin(points);
+    //points = coin(points);
 }
 
 function res(){
