@@ -5,7 +5,7 @@ function setup() {
 function draw() {
     background(220);
     let mil = millis()/1000;
-    let TIME = 5;
+    let TIME = 30;
     let timer = TIME;
     let points = 0;
     let over = TIME;
@@ -51,38 +51,24 @@ function draw() {
 
     }
 
-    //points = coin(points);
+    if(mouseIsPressed == true){
+        coin();
+    }
+    
 }
 
 function res(){
     location.reload();
 }
 
-
 function coin(){
-    // if (mouseisPressed === true && (mouseX >= 1150 && mouseX <= 1250) == true){
-    //     let dime = false;
-    //     if ((mouseX >= 1150 && mouseX <= 1250)){
-    //         dime = true;
-    //     }
-        
-
-    //     if (dime == true){
-    //         x = mouseX;
-    //         y = mouseY;
-           
-    //         ellipseMode(CENTER);
-    //         fill(255,223,0);
-    //         ellipse(x,460,100,40);
-    //         line(x-51,450,x-51,460);
-    //         line(x+50,450,x+50,460);
-    //         ellipseMode(CENTER);
-    //         fill(255,223,0);
-    //         ellipse(x,450,100,40);
-    //       ellipse(x, y, 20, 20);
-    //     }
-
-    // }
-    // fill(255,223,0);
-    // ellipse(mousex,(mouseY + 30), 100,40);
+    let test;
+    x = mouseX;
+    y = mouseY;
+    if (x >= 1100 && x <= 1300){
+        if (y >= 400 && y <= 500){
+            fill(255,223,0);
+            test = ellipse(mouseX,mouseY,100,40);
+        }
+    }
 }
