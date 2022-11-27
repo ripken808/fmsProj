@@ -1,6 +1,6 @@
 function setup() {
   createCanvas(1600, 900);
-  background (220);
+  background(220);
 }
 function draw() {
 
@@ -12,8 +12,7 @@ circle(800,450,300);
     fill(123,63,0);
   }
   else{
-    noStroke();
-    fill(123,63,0);
+    noFill(220);
   }
-  ellipse(mouseX,mouseY,80,80);
+  ellipse(mouseX,mouseY,120,120);
 }
