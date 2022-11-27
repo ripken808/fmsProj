@@ -44,15 +44,18 @@ function draw() {
         rect(200, 100, 1200, 700);
         fill(0);
         text("Restart?", 750, 450);
-        button = createButton('click me');
-        button.position(110, 110);
-        button.mousePressed(coin());
-
+        button = createButton('Restart');
+        button.position(700, 400);
+        button.size(200, 100);
+        button.mousePressed(res);
     }
 
     //coin(points);
 }
 
+function res(){
+    location.reload();
+}
 
 
 function coin(){
