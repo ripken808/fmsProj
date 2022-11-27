@@ -5,8 +5,11 @@ function setup() {
 function draw() {
     background(220);
     let mil = millis()/1000;
-    let timer = 10;
+    let TIME = 5;
+    let timer = TIME;
     let points = 0;
+    let over = TIME;
+    let button;
     
     
 
@@ -25,19 +28,26 @@ function draw() {
     rect(570, 595, 17, 175);
     rect(913, 595, 17, 175);
     
-    while (mil > 0){
+    if (mil <= TIME){
         fill(0);
         textSize(24);
         text(`Timer: ${round(timer - mil)}`, 1450, 30);
-        timer -= mil;
     }
-    if (timer <=0) {
+    if (mil > TIME){
+        over = 0;
+    }
+    if (over <= 0) {
         fill(0);
-        textSize(24);v
+        textSize(24);
         text(`Timer: 0`, 1450, 30);
         fill(220);
         rect(200, 100, 1200, 700);
+        fill(0);
         text("Restart?", 750, 450);
+        button = createButton('click me');
+        button.position(110, 110);
+        button.mousePressed(coin());
+
     }
 
     //coin(points);
