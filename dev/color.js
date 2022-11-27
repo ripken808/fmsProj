@@ -1,11 +1,12 @@
 function setup() {
-  createCanvas(400, 400);
-   background (255);
+  createCanvas(1600, 900);
+  background (220);
 }
 function draw() {
+
   noStroke();
-  fill(255);
-circle(200,300,150);
+  fill(220);
+circle(800,450,300);
 
   if(mouseIsPressed) {
     fill(123,63,0);
